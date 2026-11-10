@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image, ImageOps
 
-OUT_DIR = "output"
+OUT_DIR = "output" if os.path.isdir("output") else "."
 IMG_SIZE = (48, 48)
 
 st.set_page_config(page_title="Klasifikasi Emosi Wajah CNN", layout="wide")
